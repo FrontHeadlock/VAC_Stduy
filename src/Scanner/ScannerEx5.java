@@ -1,16 +1,26 @@
 package Scanner;
+import java.util.Scanner;
 
 public class ScannerEx5 {
     public static void main(String[] args) {
-        int a = 10;
-        int b = 20;
+        Scanner scanner = new Scanner(System.in);
         int temp = 0;
+        System.out.print("첫번째 숫자를 입력하세요 : ");
+        int num1 = scanner.nextInt();
+        System.out.print("첫번째 숫자를 입력하세요 : ");
+        int num2 = scanner.nextInt();
+        if(num1>num2){
+            temp = num1;
+            num1 = num2;
+            num2 = temp;
+        }
+        System.out.println("두 숫자 사이의 정수를 출력하세요 : ");
+        for (int i = num1; i<=num2; i++) {
+            System.out.print(i);
+            if (i < num2){
+                System.out.print(",");
+            }
 
-        temp = a;
-        a = b;
-        b= temp;
-
-        System.out.println(a);
-        System.out.println(b);
+        }
     }
 }
